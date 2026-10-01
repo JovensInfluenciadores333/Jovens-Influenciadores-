@@ -1,0 +1,38 @@
+JOVENS INFLUENCIADORES — VERSÃO FINAL ANDROID
+
+Pacote preparado para gerar o APK instalável no Samsung.
+
+IDENTIDADE
+- Nome: Jovens Influenciadores
+- Application ID: com.jovensinfluenciadores.app
+- Versão: 1.0
+- Orientação: vertical
+- Ícone Android incluído
+- Tela/tema de abertura da marca incluído
+
+COMO GERAR O APK
+1. Instale o Android Studio num computador.
+2. Abra a pasta JovensInfluenciadoresAndroid.
+3. Aguarde a sincronização do Gradle.
+4. Escolha Build > Build APK(s).
+5. O APK ficará em:
+   app/build/outputs/apk/debug/app-debug.apk
+
+INSTALAÇÃO NO SAMSUNG
+1. Envie o app-debug.apk para o Samsung.
+2. Abra o arquivo.
+3. Se o Android solicitar, permita a instalação desta fonte.
+4. Toque em Instalar.
+5. Abra "Jovens Influenciadores".
+
+FUNCIONALIDADES DA VERSÃO
+- Cadastro local
+- Perfil
+- Avaliação com 12 perguntas
+- 7 áreas de afinidade
+- Mapa de potencial
+- Desafios
+- Projetos
+- Estatísticas
+- Progresso guardado localmente
+- Refazer avaliação
