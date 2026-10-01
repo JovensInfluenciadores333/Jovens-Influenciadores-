@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="pt">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#06245c">
+<title>Jovens Influenciadores</title>
+<style>
+*{box-sizing:border-box}html,body{margin:0;min-height:100%;font-family:Arial,sans-serif;background:#dfe7f2;color:#10213f}
+button,input,select,textarea{font:inherit}.app{max-width:480px;min-height:100vh;margin:auto;background:#f6f8fc;overflow:hidden}
+.s{display:none;min-height:100vh}.on{display:flex;flex-direction:column}.hero{background:linear-gradient(155deg,#031b4a,#0870c9 62%,#f4b316);color:#fff;text-align:center;padding:55px 22px 28px;justify-content:space-between}
+.logo{font-size:62px;font-weight:900}.brand{font-size:29px;font-weight:900;margin:12px}.tag{line-height:1.55;font-weight:700}.box{padding:20px;flex:1}.head{padding:18px 20px;background:#fff}.title{font-size:26px;font-weight:900}.sub{color:#718099;line-height:1.5}.btn{width:100%;padding:15px;border:0;border-radius:16px;background:#ffc21a;color:#10213f;font-weight:900;margin-top:10px;cursor:pointer}.alt{background:#fff;border:1px solid #d5dfef}.card,.opt{background:#fff;border:1px solid #dce5f0;border-radius:16px;padding:15px;margin:10px 0}.field{margin:10px 0}.field label{display:block;font-size:11px;font-weight:800;margin-bottom:5px;color:#60708a}.field input,.field select,.field textarea{width:100%;padding:13px;border:1px solid #d5dfef;border-radius:12px;background:#fff}.profile{background:#06245c;color:#fff;padding:25px 20px;border-radius:0 0 28px 28px}.stats{display:flex;gap:8px}.stat{flex:1;background:#ffffff18;padding:12px 6px;border-radius:14px;text-align:center}.stat b{display:block;font-size:19px}.nav{display:flex;gap:8px;padding:10px 14px;background:#fff;border-top:1px solid #e3e9f2;position:sticky;bottom:0}.nav button{flex:1;border:0;background:#fff;color:#718099;font-size:11px;font-weight:800;padding:8px 2px}.nav button.active{color:#1478ff}.q{font-size:21px;font-weight:900;line-height:1.3}.opt{text-align:left;width:100%;font-weight:600;cursor:pointer}.opt.sel{border:2px solid #1478ff;background:#edf6ff}.bar{margin:14px 0}.track{height:9px;background:#e4eaf2;border-radius:9px}.fill{height:100%;background:#1478ff;border-radius:9px}.badge{display:inline-block;background:#eaf3ff;color:#1478ff;border-radius:999px;padding:6px 10px;font-size:11px;font-weight:900}.grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}.tile{background:#fff;border:1px solid #dce5f0;border-radius:16px;padding:15px}.tile b{display:block;margin:7px 0}.big{font-size:34px;font-weight:900}.toast{position:fixed;bottom:70px;left:50%;transform:translateX(-50%);background:#082657;color:#fff;padding:12px 18px;border-radius:12px;display:none;z-index:9;max-width:90%;text-align:center}.back{border:0;background:none;padding:0 0 10px;font-weight:800;color:#1478ff}.small{font-size:12px}.success{background:#eaf9f0;border-color:#bde7cb}.danger{color:#a22}.list{padding-left:20px;line-height:1.7}
+</style>
+</head>
+<body><main class="app">
+
+<section id="home" class="s on hero">
+<div><div class="logo">J★i</div><div class="brand">JOVENS<br><span style="color:#ffc21a">INFLUENCIADORES</span></div><div class="tag">Descobre o teu potencial.<br>Questiona. Aprende. Influencia.</div></div>
+<div><button class="btn" onclick="go('welcome')">COMEÇAR →</button><small>Um projeto para jovens angolanos.</small></div>
+</section>
+
+<section id="welcome" class="s">
+<div class="head"><div class="title">Bem-vindo(a)! 👋🏽</div><p class="sub">Conhece melhor os teus interesses, capacidades e formas de pensar.</p></div>
+<div class="box">
+<div class="card">💡 <b>Não existe resultado certo ou errado.</b><p class="sub">O objetivo é identificar padrões nas tuas respostas e indicar áreas para explorar.</p></div>
+<div class="grid"><div class="tile">🧠<b>Conhece-te</b><span class="small">Interesses e competências</span></div><div class="tile">🎯<b>Desafia-te</b><span class="small">Problemas e desafios</span></div><div class="tile">🚀<b>Descobre</b><span class="small">Mapa de potencial</span></div><div class="tile">🌍<b>Influencia</b><span class="small">Projetos para a comunidade</span></div></div>
+</div><div class="box"><button class="btn" onclick="go('register')">CRIAR CONTA</button><button class="btn alt" onclick="loadExisting()">CONTINUAR</button></div>
+</section>
+
+<section id="register" class="s">
+<div class="head"><button class="back" onclick="go('welcome')">← Voltar</button><div class="title">Criar conta</div><p class="sub">Preenche os teus dados para começar.</p></div>
+<div class="box">
+<div class="field"><label>NOME COMPLETO</label><input id="name" placeholder="O teu nome"></div>
+<div class="field"><label>IDADE</label><input id="age" type="number" min="10" max="99" placeholder="Ex.: 17"></div>
+<div class="field"><label>PROVÍNCIA</label><select id="province"><option>Selecionar</option><option>Luanda</option><option>Benguela</option><option>Huíla</option><option>Huambo</option><option>Cabinda</option><option>Malanje</option><option>Uíge</option><option>Outra</option></select></div>
+<div class="field"><label>ESCOLARIDADE</label><select id="school"><option>Selecionar</option><option>Ensino Secundário</option><option>Ensino Superior</option><option>Formação profissional</option></select></div>
+<div class="field"><label>TELEFONE OU EMAIL</label><input id="contact" placeholder="Contacto"></div>
+<label class="sub"><input id="terms" type="checkbox"> Aceito os termos de utilização.</label>
+<button class="btn" onclick="create()">CRIAR CONTA</button></div>
+</section>
+
+<section id="profile" class="s">
+<div class="profile"><small>JOVENS INFLUENCIADORES</small><h1>Olá, <span id="pn">jovem</span>! 👋🏽</h1><p id="welcomeLine">Estás pronto para descobrir novas possibilidades?</p>
+<div class="stats"><div class="stat"><b id="disc">0%</b><small>DESCOBERTA</small></div><div class="stat"><b id="chCount">0</b><small>DESAFIOS</small></div><div class="stat"><b id="projCount">0</b><small>PROJETOS</small></div></div></div>
+<div class="box"><div class="card"><span class="badge">MAPA DE POTENCIAL</span><h3>Descobre as tuas áreas de afinidade</h3><p class="sub">A avaliação combina interesses, raciocínio, comunicação e iniciativa.</p><button class="btn" onclick="start()">COMEÇAR AVALIAÇÃO</button></div>
+<div class="grid"><div class="tile" onclick="go('challenges')">🧩<b>Desafios</b><span class="small">Treina as tuas competências.</span></div><div class="tile" onclick="go('projects')">🌱<b>Projetos</b><span class="small">Transforma ideias em ação.</span></div></div></div>
+<div class="nav"><button class="active" onclick="go('profile')">⌂<br>Início</button><button onclick="go('result')">◉<br>Resultado</button><button onclick="go('challenges')">◇<br>Desafios</button><button onclick="go('projects')">★<br>Projetos</button></div>
+</section>
+
+<section id="test" class="s">
+<div class="head"><div style="font-size:12px;font-weight:800">AVALIAÇÃO <span id="qn">1</span>/<span id="totalQ">12</span></div><div class="track"><div id="pg" class="fill" style="width:8%"></div></div></div>
+<div class="box"><div id="question" class="q"></div><div id="opts"></div></div>
+<div class="box"><button class="btn" onclick="next()">PRÓXIMA →</button><button class="btn alt" onclick="go('profile')">SAIR</button></div>
+</section>
+
+<section id="result" class="s">
+<div class="profile"><small>A TUA DESCOBERTA</small><h1>Mapa de potencial</h1><p>Áreas que demonstraste maior afinidade.</p></div>
+<div class="box"><div id="summary" class="card"></div><div id="bars"></div>
+<div class="card"><b>O que isto significa?</b><p class="sub">O resultado mostra padrões nas tuas respostas. Não determina o teu futuro nem substitui orientação profissional.</p></div>
+<div class="card"><b>Próximo passo</b><p class="sub">Escolhe uma área que te interessa e experimenta um desafio. O desenvolvimento acontece com prática.</p><button class="btn" onclick="go('challenges')">VER DESAFIOS</button></div>
+<button class="btn alt" onclick="start()">REFAZER AVALIAÇÃO</button></div>
+<div class="nav"><button onclick="go('profile')">⌂<br>Início</button><button class="active" onclick="go('result')">◉<br>Resultado</button><button onclick="go('challenges')">◇<br>Desafios</button><button onclick="go('projects')">★<br>Projetos</button></div>
+</section>
+
+<section id="challenges" class="s">
+<div class="head"><button class="back" onclick="go('profile')">← Perfil</button><div class="title">Desafios 🧩</div><p class="sub">Pequenas missões para desenvolver competências.</p></div>
+<div class="box">
+<div class="card"><span class="badge">DESAFIO 1</span><h3>Problema da comunidade</h3><p class="sub">Identifica um problema da tua escola ou bairro e escreve três possíveis soluções.</p><button class="btn" onclick="completeChallenge(1)">CONCLUIR DESAFIO</button></div>
+<div class="card"><span class="badge">DESAFIO 2</span><h3>Comunicação</h3><p class="sub">Explica uma ideia importante em 60 segundos, de forma simples e convincente.</p><button class="btn" onclick="completeChallenge(2)">CONCLUIR DESAFIO</button></div>
+<div class="card"><span class="badge">DESAFIO 3</span><h3>Inovação</h3><p class="sub">Imagina uma solução tecnológica para melhorar a vida dos jovens na tua comunidade.</p><button class="btn" onclick="completeChallenge(3)">CONCLUIR DESAFIO</button></div>
+</div>
+<div class="nav"><button onclick="go('profile')">⌂<br>Início</button><button onclick="go('result')">◉<br>Resultado</button><button class="active" onclick="go('challenges')">◇<br>Desafios</button><button onclick="go('projects')">★<br>Projetos</button></div>
+</section>
+
+<section id="projects" class="s">
+<div class="head"><button class="back" onclick="go('profile')">← Perfil</button><div class="title">Projetos 🌱</div><p class="sub">Ideias que podem tornar-se iniciativas reais.</p></div>
+<div class="box">
+<div class="card"><span class="badge">TECNOLOGIA</span><h3>Conecta Jovem</h3><p class="sub">Criar uma solução digital para partilhar oportunidades de formação, bolsas e eventos juvenis.</p></div>
+<div class="card"><span class="badge">COMUNIDADE</span><h3>Jovens pela Comunidade</h3><p class="sub">Organizar uma pequena ação para resolver um problema identificado no bairro ou na escola.</p></div>
+<div class="card"><span class="badge">EDUCAÇÃO</span><h3>Clube de Talentos</h3><p class="sub">Criar encontros onde jovens possam apresentar competências em ciência, arte, comunicação e empreendedorismo.</p></div>
+</div>
+<div class="nav"><button onclick="go('profile')">⌂<br>Início</button><button onclick="go('result')">◉<br>Resultado</button><button onclick="go('challenges')">◇<br>Desafios</button><button class="active" onclick="go('projects')">★<br>Projetos</button></div>
+</section>
+
+</main><div id="toast" class="toast"></div>
+<script>
+const qs=[
+["Qual destas atividades mais te interessa?",["Descobrir como funciona o corpo humano","Criar programas ou aplicações","Resolver problemas matemáticos","Debater problemas da sociedade","Criar vídeos e conteúdos","Criar negócios"],["science","tech","logic","society","communication","business"]],
+["Uma comunidade enfrenta falta de água. O que farias primeiro?",["Investigar as causas","Conversar com moradores","Criar uma solução tecnológica","Organizar uma campanha","Procurar financiamento","Analisar os dados"],["science","society","tech","communication","business","logic"]],
+["Qual número completa: 2, 4, 8, 16, ...?",["20","24","32","64"],["communication","arts","logic","tech"]],
+["Como poderias melhorar o acesso à internet nas zonas rurais?",["Escrever a tua ideia","Gravar uma resposta em áudio","Fazer um plano visual","Descrever os passos da solução"],["communication","communication","arts","tech"]],
+["Quando recebes um problema difícil, normalmente...",["Procuro dados e evidências","Divido o problema em partes","Peço opiniões diferentes","Penso numa solução criativa"],["science","logic","society","arts"]],
+["Qual atividade gostarias mais de liderar?",["Uma experiência científica","Uma equipa de desenvolvimento","Uma campanha juvenil","Um pequeno negócio"],["science","tech","communication","business"]],
+["O que mais te motiva num projeto?",["Descobrir algo novo","Criar algo que funcione","Ajudar pessoas","Gerar uma oportunidade"],["science","tech","society","business"]],
+["Se tivesses de apresentar uma ideia, preferirias...",["Usar números e evidências","Fazer uma demonstração","Contar uma história","Criar uma apresentação visual"],["logic","tech","communication","arts"]],
+["Qual habilidade gostarias de desenvolver?",["Investigação","Programação","Liderança","Empreendedorismo"],["science","tech","society","business"]],
+["Uma equipa discorda sobre uma decisão. O que farias?",["Analisaria os factos","Procuraria uma solução prática","Ouviria todos","Tentaria criar uma alternativa"],["logic","tech","society","arts"]],
+["Que resultado te deixaria mais orgulhoso?",["Uma descoberta","Uma aplicação criada por mim","Uma mudança na comunidade","Uma empresa ou projeto sustentável"],["science","tech","society","business"]],
+["Para aprender algo novo, preferes...",["Ler e pesquisar","Experimentar na prática","Conversar com pessoas","Criar e testar ideias"],["science","tech","communication","arts"]]
+];
+const names={tech:"Tecnologia",science:"Ciências",logic:"Lógica e Matemática",society:"Ciências Sociais",communication:"Comunicação",business:"Empreendedorismo",arts:"Artes e Criatividade"};
+let i=0,ans=[],scores={},completed=Number(localStorage.getItem("ji_challenges")||0);
+
+function go(id){document.querySelectorAll(".s").forEach(x=>x.classList.remove("on"));document.getElementById(id).classList.add("on");scrollTo(0,0);updateStats()}
+function toast(t){let x=document.getElementById("toast");x.textContent=t;x.style.display="block";clearTimeout(window.tt);window.tt=setTimeout(()=>x.style.display="none",1900)}
+function create(){
+ let n=document.getElementById("name").value.trim();
+ if(!n)return toast("Coloca o teu nome.");
+ if(!document.getElementById("terms").checked)return toast("Aceita os termos.");
+ localStorage.setItem("ji_name",n);localStorage.setItem("ji_age",document.getElementById("age").value);
+ localStorage.setItem("ji_province",document.getElementById("province").value);localStorage.setItem("ji_school",document.getElementById("school").value);
+ document.getElementById("pn").textContent=n.split(" ")[0];go("profile");toast("Conta criada com sucesso!");
+}
+function loadExisting(){let n=localStorage.getItem("ji_name");if(n){document.getElementById("pn").textContent=n.split(" ")[0];go("profile")}else go("register")}
+function updateStats(){document.getElementById("chCount").textContent=completed;document.getElementById("projCount").textContent=localStorage.getItem("ji_projects")||0;document.getElementById("disc").textContent=localStorage.getItem("ji_discovery")||"0%"}
+function start(){i=0;ans=[];document.getElementById("totalQ").textContent=qs.length;render();go("test")}
+function render(){let q=qs[i];document.getElementById("qn").textContent=i+1;document.getElementById("pg").style.width=((i+1)/qs.length*100)+"%";document.getElementById("question").textContent=q[0];document.getElementById("opts").innerHTML=q[1].map((x,j)=>'<button class="opt" onclick="pick('+j+',this)">'+String.fromCharCode(65+j)+" · "+x+"</button>").join("")}
+function pick(j,e){document.querySelectorAll(".opt").forEach(x=>x.classList.remove("sel"));e.classList.add("sel");ans[i]=j}
+function next(){if(ans[i]===undefined)return toast("Escolhe uma opção.");if(i<qs.length-1){i++;render()}else finish()}
+function finish(){
+ scores={tech:0,science:0,logic:0,society:0,communication:0,business:0,arts:0};
+ ans.forEach((a,k)=>scores[qs[k][2][a]]++);
+ let r=Object.entries(scores).sort((a,b)=>b[1]-a[1]),max=r[0][1]||1;
+ let discovery=Math.min(99,Math.round((r[0][1]/qs.length)*100));
+ localStorage.setItem("ji_discovery",discovery+"%");localStorage.setItem("ji_scores",JSON.stringify(scores));
+ document.getElementById("summary").innerHTML="<b>O teu destaque atual</b><div class='big'>"+names[r[0][0]]+"</div><p class='sub'>Esta é a área com maior afinidade nas respostas desta avaliação.</p>";
+ document.getElementById("bars").innerHTML=r.map(x=>{let v=Math.round(x[1]/max*100);return '<div class="bar"><b>'+names[x[0]]+'</b><span style="float:right">'+Math.round(x[1]/qs.length*100)+'%</span><div class="track"><div class="fill" style="width:'+v+'%"></div></div></div>'}).join("");
+ go("result");toast("Avaliação concluída!");
+}
+function completeChallenge(n){
+ let key="ji_done_"+n;
+ if(localStorage.getItem(key))return toast("Este desafio já foi concluído.");
+ localStorage.setItem(key,"1");completed++;localStorage.setItem("ji_challenges",completed);updateStats();toast("Desafio concluído! 🎉");
+}
+document.getElementById("pn").textContent=(localStorage.getItem("ji_name")||"jovem").split(" ")[0];
+updateStats();
+</script></body></html>
